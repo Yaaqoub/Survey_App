@@ -31,6 +31,31 @@ db.Sequelize = Sequelize;
 /**
  * Tables relations START
  */
+//Users Model
+db.users.belongsTo(db.roles, {foreignKey: 'role_id'});
+db.users.hasMany(db.answers, {foreignKey: 'user_id'});
+
+//Roles Model
+db.roles.hasMany(db.users, {foreignKey: 'role_id'});
+
+//Surveys Model
+db.surveys.hasMany(db.questions, {foreignKey: 'survey_id'});
+
+//Questions Model
+db.questions.belongsTo(db.surveys, {foreignKey: 'survey_id'});
+db.questions.hasMany(db.answers, {foreignKey: 'question_id'});
+db.questions.belongsToMany(db.types, {through: 'question_type', foreignKey: 'question_id', as:'questionHasType'});
+
+//Answers Model
+db.answers.belongsTo(db.questions, {foreignKey: 'question_id'});
+db.answers.belongsTo(db.users, {foreignKey: 'user_id'});
+
+//Types Model
+db.types.belongsToMany(db.questions, {through: 'question_type', foreignKey: 'type_id', as:'typeHasQuestion'});
+db.types.belongsToMany(db.params, {through: 'type_param', foreignKey: 'type_id', as:'typeHasParam'});
+
+//Params Model
+db.params.belongsToMany(db.types, {through: 'type_param', foreignKey: 'param_id', as:'paramHasType'});
 
 /**
  * Tables relations END
