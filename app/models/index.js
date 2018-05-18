@@ -44,14 +44,14 @@ db.surveys.hasMany(db.questions, {foreignKey: 'survey_id'});
 //Questions Model
 db.questions.belongsTo(db.surveys, {foreignKey: 'survey_id'});
 db.questions.hasMany(db.answers, {foreignKey: 'question_id'});
-db.questions.belongsToMany(db.types, {through: 'question_type', foreignKey: 'question_id', as:'questionHasType'});
+db.questions.belongsTo(db.types, {foreignKey: 'type_id'});
 
 //Answers Model
 db.answers.belongsTo(db.questions, {foreignKey: 'question_id'});
 db.answers.belongsTo(db.users, {foreignKey: 'user_id'});
 
 //Types Model
-db.types.belongsToMany(db.questions, {through: 'question_type', foreignKey: 'type_id', as:'typeHasQuestion'});
+db.types.hasMany(db.questions, {foreignKey: 'type_id'});
 db.types.belongsToMany(db.params, {through: 'type_param', foreignKey: 'type_id', as:'typeHasParam'});
 
 //Params Model
