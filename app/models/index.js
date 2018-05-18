@@ -28,4 +28,12 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+/**
+ * Tables relations START
+ */
+
+/**
+ * Tables relations END
+ */
+
 module.exports = db;
