@@ -3,7 +3,10 @@ let createError = require('http-errors'),
     path = require('path'),
     cookieParser = require('cookie-parser'),
     logger = require('morgan'),
-    env = require('dotenv').load();
+    env = require('dotenv').load(),
+    passport   = require('passport'),
+    session    = require('express-session'),
+    bodyParser = require('body-parser');
 
 
 //Exported models
@@ -25,11 +28,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 let app = express();
-
-let passport   = require('passport'),
-    session    = require('express-session'),
-    bodyParser = require('body-parser');
-
 
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
