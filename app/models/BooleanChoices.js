@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
-    let Types = sequelize.define('types', {
+    let BooleanChoices = sequelize.define('booleanchoices', {
 
         id: {
             autoIncrement: true,
@@ -8,7 +8,12 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
-        type_name: {
+        choice_id: {
+            type: Sequelize.STRING,
+            notEmpty: true
+        },
+
+        choice_label: {
             type: Sequelize.STRING,
             notEmpty: true
         }
@@ -16,5 +21,5 @@ module.exports = function(sequelize, Sequelize) {
         underscored: true
     });
 
-    return Types;
+    return BooleanChoices;
 }

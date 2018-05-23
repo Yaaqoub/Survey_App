@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
-    let Params = sequelize.define('params', {
+    let ListChoices = sequelize.define('listchoices', {
 
         id: {
             autoIncrement: true,
@@ -8,7 +8,12 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
-        param_name: {
+        choice_number: {
+            type: Sequelize.STRING,
+            notEmpty: true
+        },
+
+        label: {
             type: Sequelize.STRING,
             notEmpty: true
         }
@@ -16,5 +21,5 @@ module.exports = function(sequelize, Sequelize) {
         underscored: true
     });
 
-    return Params;
+    return ListChoices;
 }

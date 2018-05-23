@@ -44,18 +44,46 @@ db.surveys.hasMany(db.questions, {foreignKey: 'survey_id'});
 //Questions Model
 db.questions.belongsTo(db.surveys, {foreignKey: 'survey_id'});
 db.questions.hasMany(db.answers, {foreignKey: 'question_id'});
-db.questions.belongsTo(db.types, {foreignKey: 'type_id'});
+db.questions.hasMany(db.score, {foreignKey: 'question_id'});
+db.questions.hasMany(db.range, {foreignKey: 'question_id'});
+db.questions.hasMany(db.list, {foreignKey: 'question_id'});
+db.questions.hasMany(db.section, {foreignKey: 'question_id'});
+db.questions.hasMany(db.booleans, {foreignKey: 'question_id'});
 
 //Answers Model
 db.answers.belongsTo(db.questions, {foreignKey: 'question_id'});
 db.answers.belongsTo(db.users, {foreignKey: 'user_id'});
 
-//Types Model
-db.types.hasMany(db.questions, {foreignKey: 'type_id'});
-db.types.belongsToMany(db.params, {through: 'type_param', foreignKey: 'type_id', as:'typeHasParam'});
+//Score Model
+db.score.belongsTo(db.questions, {foreignKey: 'question_id'});
 
-//Params Model
-db.params.belongsToMany(db.types, {through: 'type_param', foreignKey: 'param_id', as:'paramHasType'});
+//Range Model
+db.range.belongsTo(db.questions, {foreignKey: 'question_id'});
+db.range.belongsToMany(db.labels, {through: 'range_label', foreignKey: 'range_id', as:'rangeHasLabel'});
+
+//List Model
+db.list.belongsTo(db.questions, {foreignKey: 'question_id'});
+db.list.belongsToMany(db.listchoices, {through: 'list_listchoices', foreignKey: 'list_id', as:'listHasChoices'});
+
+//Section Model
+db.section.belongsTo(db.questions, {foreignKey: 'question_id'});
+db.section.belongsTo(db.attachment, {foreignKey: 'attachment_id'});
+
+//Boolean Model
+db.booleans.belongsTo(db.questions, {foreignKey: 'question_id'});
+db.booleans.belongsToMany(db.booleanchoices, {through: 'boolean_booleanchoices', foreignKey: 'boolean_id', as:'booleanHasChoices'});
+
+//Labels Model
+db.labels.belongsToMany(db.range, {through: 'range_label', foreignKey: 'label_id', as:'labelHasRange'});
+
+//List_Choices Model
+db.listchoices.belongsToMany(db.list, {through: 'list_listchoices', foreignKey: 'choice_id', as:'choicesHasList'});
+
+//Boolean_Choices Model
+db.booleanchoices.belongsToMany(db.booleans, {through: 'boolean_booleanchoices', foreignKey: 'choice_id', as:'choicesHasBoolean'});
+
+//Attachment Model
+db.attachment.hasMany(db.section, {foreignKey: 'attachment_id'});
 
 /**
  * Tables relations END
