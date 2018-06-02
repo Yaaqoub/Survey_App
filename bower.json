@@ -1,0 +1,7 @@
+{
+  "name": "joliform-js-plugin",
+  "dependencies": {
+    "jquery": "2.2.3",
+    "bootstrap": "3.3.4"
+  }
+}
