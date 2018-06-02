@@ -1,0 +1,392 @@
+/* ===============================================
+    blue theme for joliform
+================================================ */
+
+.blue {
+    font-family: Source Sans Pro, sans-serif;
+    height: inherit;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+
+
+/* question list */
+.blue .question-list {
+    list-style-type: none;
+}
+.blue .question-list .question-item {
+    padding: 100px 0;
+    margin: 50px 0;
+    pointer-events: none;
+    opacity: 0.2;
+}
+.blue .question-list .active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+/* question text */
+.blue .question-text {
+    display: flex;
+    justify-content: flex-start;
+    padding: 25px 0;
+}
+.blue .question-text .item {
+    color: #4FB0AE;
+    font-size: 42px;
+    height: 40px;
+    margin-top: -10px;
+    cursor: default;
+}
+.blue .question-text .text {
+    padding-left: 12px;
+    font-size: 24px;
+    cursor: default;
+    color: #37404A;
+}
+
+/* submit button */
+.blue .content {
+    margin-left: 26px;
+    flex-wrap: wrap;
+}
+.blue .description {
+    margin-left: 26px;
+    margin-top: -20px;
+    padding-bottom: 25px;
+    color: rgba(100, 100, 100, 1);
+}
+.blue .multiple {
+    border-left: 1px dashed;
+    padding-left: 15px;
+    color: #4FB0AE;
+}
+.blue .content button {
+    outline: none;
+    background-color: #4FB0AE;
+    padding: 5px 12px;
+    line-height: 25px;
+    border-radius: 3px;
+    border: 1px solid #367776;
+}
+.blue .content .btn-prompt {
+    color: #4FB0AE;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.blue .content .btn-prompt b {
+    padding-left: 3px;
+}
+
+/* footer */
+.blue .footer {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.blue .footer .score {
+    width: 20%;
+    height: inherit;
+    text-align: center;
+    margin: 0 auto;
+}
+.blue .footer .score .score-progress {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.blue .footer .score .score-progress .label {
+    color: #4FB0AE;
+    font-size: 12px;
+    text-align: left;
+    padding: 0 0 5px 0;
+}
+.blue .footer .score .score-progress .bar {
+
+}
+.blue .footer .score .score-progress .bar .wrapper {
+    background-color: #4FB0AE;
+    opacity: .35;
+    z-index: 1;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+}
+.blue .footer .score .score-progress .bar .progress {
+    background-color: #4FB0AE;
+    opacity: 1;
+    z-index: 2;
+    width: 0;
+    margin-top: -5px;
+    height: 5px;
+    border-radius: 5px;
+}
+.blue .footer .navigation {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 5px;
+}
+.blue .footer .navigation div {
+    margin: 5px 5px 5px 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 36px;
+    background-color: #4FB0AE;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+.blue .footer .navigation .up { }
+.blue .footer .navigation .down { }
+.blue .footer .navigation .blocked {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+/* sudmit-footer */
+.blue .submit-footer {
+    min-height: 550px;
+    padding: 0 !important;
+    color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.blue .submit-footer .content button {
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 10px 15px;
+}
+
+
+
+/* statement */
+.blue .statement {
+}
+.blue .statement .content {
+    color: #edf7f7;
+    font-size: 19px;
+}
+
+/* score */
+.blue .score {
+}
+.blue .score .content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.blue .score .content .selected > .icon {
+    opacity: 1 !important;
+}
+.blue .score .content .score-item {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 35px 0 0;
+}
+.blue .score .content .score-item:hover > .icon {
+    opacity: 1;
+ }
+.blue .score .content .score-item .icon {
+    font-size: 56px;
+    color: #4FB0AE;
+    cursor: pointer;
+    opacity: .55;
+}
+.blue .score .content .score-item .text {
+    display: flex;
+    justify-content: center;
+    cursor: default;
+    color: #367776
+}
+.blue .score .content .score-item .text span {
+    border: 1px solid #4FB0AE;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+/* range */
+.blue .range {
+}
+.blue .range .content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.blue .range .content .selected {
+    background-color: rgb(238, 238, 238) !important;
+}
+.blue .range .content .selected .span {
+    color: black !important;
+}
+.blue .range .content .range-item {
+    border: 1px solid rgba(218, 218, 218, .5);
+    padding: 15px 25px;
+    background-color: #F8F8F8;
+    cursor: pointer;
+}
+.blue .range .content .range-item:hover {
+    background-color: rgb(238, 238, 238)
+}
+.blue .range .content .range-item span {
+    font-size: 14px;
+    color: #367776;
+}
+.stripe .range .content .label {
+    color: #4FB0AE;
+}
+
+/* textfield */
+.blue .textfield {
+}
+.blue .textfield .content {
+    color: white;
+    font-size: 22px;
+}
+.blue .textfield .content input {
+    color: #37404A;
+    border: 2px dashed #4FB0AE;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 22px;
+    width: 95%;
+}
+.blue .textfield .content input:focus {
+    outline: none;
+}
+.blue .textfield .content .textfield-submit {
+    margin-top: 10px;
+    width: 180px;
+    padding: 10px;
+    background-color: #F8F8F8;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 4px;
+}
+
+/* list */
+.blue .list {
+}
+.blue .list .content {
+    font-size: 16px;
+}
+.blue .list .content .data-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.blue .list .content .data-list .selected {
+    background-color: rgb(238, 238, 238) !important;
+    border: 1px solid rgba(210, 210, 210, 1) !important;
+}
+.blue .list .content .data-list .list-item {
+    background-color: rgba(238, 238, 238, .3);
+    padding: 5px 20px 5px 5px;
+    margin: 10px 10px 10px 0;
+    border: 1px solid rgba(218, 218, 218, .8);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.blue .list .content .data-list .list-item:hover {
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgba(210, 210, 210, 1);
+}
+.blue .list .content .data-list .list-item .text {
+    color: #4FB0AE;
+    font-size: 18px;
+    font-weight: bold;
+}
+.blue .list .content .data-list .list-item .ok {
+    padding-left: 10px;
+    color: #4FB0AE;
+    visibility: hidden;
+}
+.blue .list .content .data-list .list-item .number {
+    margin-right: 10px;
+    color: #4FB0AE;
+    border: 1px solid rgba(180, 180, 180, 1);
+    border-radius: 2px;
+    padding: 0 5px;
+    font-size: 12px;
+    vertical-align: text-top;
+}
+.blue .list .content .list-btn {
+    color: #edf7f7;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+/* section */
+.blue .section {
+}
+.blue .section .content {
+    color: #edf7f7;
+    font-size: 19px;
+}
+.blue .section .content .continue-btn {
+    padding-top: 15px;
+}
+
+/* boolean */
+.blue .boolean {
+}
+.blue .boolean .content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    color: #4FB0AE;
+}
+.blue .boolean .content .selected {
+    background-color: rgba(0, 0, 0, .1) !important;
+}
+.blue .boolean .boolean-item {
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgba(238, 238, 238, .3);
+    border: 1px solid rgba(218, 218, 218, .8);
+}
+.blue .boolean .boolean-item:hover {
+    background-color: rgba(238, 238, 238, .8);
+    border: 1px solid rgba(218, 218, 218, 1);
+}
+.blue .boolean .boolean-item .body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px 70px 10px 0;
+}
+.blue .boolean .boolean-item .number {
+    height: 20px;
+    color: #4FB0AE;
+    border: 1px solid rgba(180,180,180,1);
+    border-radius: 2px;
+    padding: 0 5px;
+    font-size: 12px;
+    margin: 10px 50px 10px 10px;
+}
+.blue .boolean .boolean-item .btn-icon {
+    font-size: 56px;
+}
+.blue .boolean .boolean-item .btn-label {
+    font-size: 22px;
+    text-align: center;
+    padding-top: 20px;
+}

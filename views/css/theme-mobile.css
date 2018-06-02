@@ -1,0 +1,194 @@
+/* ===============================================
+    mobile mobile theme for joliform
+================================================ */
+
+
+
+
+/* question list */
+.mobile .question-list .question-item:first-child{
+    padding: 10vh 0;
+}
+.mobile .question-list .question-item:not(:first-child):not(:last-child) {
+    padding: 50vh 0;
+}
+
+/* question text */
+.mobile .question-text .item {
+    font-size: 46px;
+    width: 40px;
+    height: auto;
+    flex-shrink: 0;
+}
+.mobile .question-text .text {
+    font-size: 46px;
+    padding: 0;
+}
+
+/* question description */
+.mobile .description {
+    font-size: 36px;
+    margin-left: 40px;
+}
+
+/* question content */
+.mobile .content {
+    margin: 0 40px;
+}
+.mobile .content button {
+    font-size: 36px;
+    height: 72px;
+    padding: 0 26px;
+    border-radius: 8px;
+    line-height: 4px;
+}
+.mobile .content .btn-prompt {
+    display: none;
+}
+
+/* submit-footer */
+.mobile .unfixed-footer .content button {
+    font-size: 36px;
+    height: 72px;
+    padding: 0 26px;
+    border-radius: 4px;
+    line-height: 4px;
+    width: 100%;
+}
+.mobile .unfixed-footer .btn-prompt {
+    display: none;
+}
+
+/* footer */
+.mobile .footer {
+    width: 100%;
+}
+.mobile .footer .score {
+    width: 35%;
+    margin-left: 25px;
+}
+.mobile .footer .score .score-progress .label {
+    font-size: 28px;
+}
+.mobile .footer .navigation div {
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+}
+.mobile .footer .score .score-progress .bar .wrapper {
+    height: 10px;
+}
+.mobile .footer .score .score-progress .bar .progress {
+    margin-top: -10px;
+    height: 10px;
+}
+
+
+
+
+/* score */
+.mobile .score .content {
+    justify-content: space-between;
+}
+.mobile .score .content .score-item {
+    max-width: 82px;
+    padding: 0;
+}
+.mobile .score .content .score-item .icon {
+    font-size: 82px;
+    margin: 0;
+}
+.mobile .score .content .score-item .key {
+    display: none;
+}
+
+/* range */
+.mobile .range .content .range-item {
+    padding: 15px 0;
+    text-align: center;
+    max-width: none;
+}
+.mobile .range .content .range-item span {
+    font-size: 36px;
+}
+
+/* textfield */
+.mobile .textfield .content input {
+    width: 100%;
+    font-size: 36px;
+    border: 5px dashed #6772e5;
+}
+.mobile .textfield .content .textfield-submit {
+    width: 127px;
+}
+
+
+/* list */
+.mobile .list .content .data-list {
+    flex-direction: column;
+}
+.mobile .list .content .data-list .list-item {
+    display: flex;
+    background-color: rgba(238,238,238,.3);
+}
+.mobile .list .content .data-list .list-item:hover {
+    background-color: rgba(238,238,238,.3);
+}
+.mobile .list .content .data-list .list-item .text {
+    font-size: 36px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.mobile .list .content .data-list .list-item .ok {
+    font-size: 32px;
+    margin-top: 16px;
+    margin-left: auto;
+}
+.mobile .list .content .data-list .list-item .key {
+    display: block;
+    font-size: 32px;
+    height: 46px;
+    margin: 9px;
+    padding: 0 13px;
+}
+.mobile .list .content .other-input .btn-wrapper {
+    margin-top: 0;
+}
+.mobile .list .content .other-input .btn-wrapper button {
+    height: 64px;
+}
+.mobile .list .content .other-input .input-content {
+    margin: 15px 0;
+}
+.mobile .list .content .other-input .input-wrapper input {
+    font-size: 36px;
+    border: 5px dashed #6772e5;
+}
+
+/* boolean */
+.mobile .boolean .boolean-item {
+    justify-content: center;
+    margin: 0;
+    width: 50%;
+}
+.mobile .boolean .boolean-item .body {
+    padding: 50px;
+}
+.mobile .boolean .boolean-item .btn-icon {
+    font-size: 70px;
+}
+.mobile .boolean .boolean-item .btn-label {
+    font-size: 36px;
+}
+.mobile .boolean .boolean-item .key {
+    display: none;
+}
+
+/* section */
+.mobile .section .content iframe {
+    width: 100%;
+    height: 30vh !important;
+}
+
+
+

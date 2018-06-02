@@ -24,28 +24,28 @@ gulp
         callback();
     })
     .task('html', () => {
-        gulp.src('view/**/*.html')
+        gulp.src('views/**/*.html')
             .pipe(gulp.dest(destination));
     })
     .task('css', () => {
-        gulp.src('view/**/*.css')
+        gulp.src('views/**/*.css')
             .pipe(cleanCSS())
             .pipe(concatCss('app.min.css'))
             .pipe(gulp.dest(destination));
     })
     .task('js', () => {
-        browserify({ entries: `./view/js/${es6 ? 'es6-version' : 'es5-version'}/joliform.js` })
+        browserify({ entries: `./views/js/${es6 ? 'es6-version' : 'es5-version'}/joliform.js` })
             .transform(babelify.configure({ presets: ['es2015'] }))
             .bundle()
             .pipe(source('app.min.js'))
             .pipe(gulp.dest(destination));
 
-        gulp.src('./view/js/init.js')
+        gulp.src('./views/js/init.js')
             .pipe(concat('init.js'))
             .pipe(gulp.dest(destination));
     })
     .task('fonts', () => {
-        gulp.src('view/fonts/*.*')
+        gulp.src('views/fonts/*.*')
             .pipe(gulp.dest(destination + '/fonts'));
     })
     .task('vendors.js', () => {
@@ -59,5 +59,5 @@ gulp
             .pipe(gulp.dest(destination + '/lib'));
     })
     .task('watch', () => {
-        gulp.watch('view/**/*.{html,css,js}', ['html', 'css', 'js']);
+        gulp.watch('views/**/*.{html,css,js}', ['html', 'css', 'js']);
     });
